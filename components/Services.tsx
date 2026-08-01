@@ -72,7 +72,7 @@ export default function Services() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
         {services.map((s) =>
-          s.isFeatureCard ? (
+          "isFeatureCard" in s && s.isFeatureCard ? (
             <div
               key={s.id}
               className="relative bg-surface p-8 flex flex-col justify-between min-h-[280px] overflow-hidden"
