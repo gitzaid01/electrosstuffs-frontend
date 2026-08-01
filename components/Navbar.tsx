@@ -15,7 +15,7 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [dark, setDark] = useState(true);
+  
   const pathname = usePathname();
 
   return (
@@ -61,16 +61,10 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button
-            aria-label="Toggle theme"
-            onClick={() => setDark((d) => !d)}
-            className="h-8 w-8 flex items-center justify-center rounded-full text-muted hover:text-cream transition-colors"
-          >
-            {dark ? "☾" : "☀"}
-          </button>
+         
           <a
             href="/#contact"
-            className="rounded-full bg-accent px-5 py-2 font-mono text-xs uppercase tracking-widest text-cream hover:opacity-90 transition-opacity"
+            className="rounded-full bg-accent px-5 py-2 font-mono text-xs uppercase tracking-tight text-cream hover:opacity-90 transition-opacity"
           >
             Start Project
           </a>
