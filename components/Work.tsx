@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { clientWork, ownProjects } from "@/lib/data";
 
 export default function Work() {
@@ -12,11 +13,9 @@ export default function Work() {
         Work
       </h2>
 
-      <a
-        href={clientWork.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group block  bg-surface p-6 lg:p-10 hover:border-accent transition-colors"
+      <Link
+        href="/work/ewa-transglobal"
+        className="group block rounded-lg border border-border bg-surface p-6 lg:p-10 hover:border-accent transition-colors"
       >
         <div className="flex items-start justify-between gap-6">
           <div>
@@ -48,11 +47,11 @@ export default function Work() {
             ))}
           </div>
           <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent group-hover:gap-3 transition-all shrink-0 ml-6">
-            Visit Live Site
+            View Case Study
             <span aria-hidden>→</span>
           </span>
         </div>
-      </a>
+      </Link>
 
       <div className="mt-20">
         <span className="font-mono text-xs uppercase tracking-widest text-muted">
@@ -65,7 +64,7 @@ export default function Work() {
         {ownProjects.map((p) => (
           <div
             key={p.id}
-            className=" bg-surface p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+            className="rounded-lg border border-border bg-surface p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
           >
             <div>
               <h4 className="font-display text-xl uppercase">{p.name}</h4>

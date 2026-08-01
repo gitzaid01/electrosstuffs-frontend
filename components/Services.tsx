@@ -52,7 +52,7 @@ function ServiceIcon({ name }: { name: string }) {
 
 export default function Services() {
   return (
-    <section id="services" className="container-px py-24 border-t border-border">
+    <section id="services" className="container-px py-24 ">
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
         <div>
           <span className="font-mono text-xs uppercase tracking-widest text-accent">
